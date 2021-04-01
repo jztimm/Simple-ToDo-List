@@ -1,12 +1,13 @@
 import React, {useState} from 'react'
+import '../Styles/Tasks.css'
 
 function Tasks() {
   const [tasks, setTasks] = useState(["Test Task 1", "Test Task 2"]);
 
   return (
-    <div>
+    <div className="tasks_list">
       {tasks.map(task => (
-        <li>{task}</li>
+        <h3>{task}</h3>
       ))}
     </div>
   )
