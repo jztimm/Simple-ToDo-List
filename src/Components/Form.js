@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import { Button, FormControl, InputLabel, Input } from '@material-ui/core';
 import Task from './Task'
-import '../Styles/Tasks.css'
 
 function Form() {
   const [input, setInput] = useState("");
@@ -28,6 +27,7 @@ function Form() {
       </form>
       <div className="tasks_list">
         {tasks.map(task => (
+          // <p>{task}</p>
           <Task text={task}/>
         ))}
       </div>

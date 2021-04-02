@@ -1,7 +1,6 @@
 import React from 'react'
 import {List, ListItem, ListItemText, Button} from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
-import {db} from '../firebase'
 import '../Styles/Task.css'
 
 function Task(props) {
@@ -10,11 +9,9 @@ function Task(props) {
     <div>
       <List className="task_list">
         <ListItem button>
-          <ListItemText primary={props.text.task} />
+          <ListItemText primary={props.text} />
         </ListItem>
-        <Button variant="text" color="default" onClick={event => {
-          db.collection('tasks').doc(props.text.id).delete()}
-        }><DeleteIcon/> Delete Me</Button>
+        <Button variant="text" color="default" ><DeleteIcon/> Delete Me</Button>
       </List>
     </div>
   )
