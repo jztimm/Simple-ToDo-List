@@ -3,16 +3,16 @@ import { Button, FormControl, InputLabel, Input } from '@material-ui/core';
 import Task from './Task'
 
 function Form() {
+  const [tasks, setTasks] = useState([]);
   const [input, setInput] = useState("");
-  const [tasks, setTasks] = useState(["Test Task 1", "Test Task 2"]);
 
   const changeHandler = (event) => {
     setInput(event.target.value)
   }
 
-  const submitHandler = (event) => {
+  const addTask = (event) => {
     event.preventDefault()
-    setTasks(...tasks, input)
+    setTasks([...tasks, input])
   }
 
   return (
@@ -22,15 +22,16 @@ function Form() {
         <InputLabel >Write a Task</InputLabel>
         <Input value={input} onChange={changeHandler}/>
       </FormControl>
-        <Button type="submit" variant="contained" color="primary" onClick={submitHandler}>Add task</Button>
+        <Button type="submit" variant="contained" color="primary" onClick={addTask}>Add task</Button>
         {/* <button type="submit" onClick={addTask}>Add a task</button> */}
       </form>
-      <div className="tasks_list">
+      <p>
         {tasks.map(task => (
-          // <p>{task}</p>
-          <Task text={task}/>
+          <p>
+            <Task text={task}/>
+          </p>
         ))}
-      </div>
+      </p>
     </div>
   )
 }
