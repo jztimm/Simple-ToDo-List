@@ -7,9 +7,9 @@ function Header() {
       <Navbar bg="dark" variant="dark">
         <Container>
         <Navbar.Brand href="/">Simple Tasker</Navbar.Brand>
-        <Nav className="mr-auto">
+        {/* <Nav className="mr-auto">
           <Nav.Link href="#home">Home</Nav.Link>
-        </Nav>
+        </Nav> */}
         </Container>
       </Navbar>
     </div>

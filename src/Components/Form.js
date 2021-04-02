@@ -13,6 +13,7 @@ function Form() {
   const addTask = (event) => {
     event.preventDefault()
     setTasks([...tasks, input])
+    setInput("")
   }
 
   return (
