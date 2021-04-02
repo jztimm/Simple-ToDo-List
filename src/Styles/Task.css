@@ -3,6 +3,6 @@
   margin-top: 50px;
 }
 
-ListItem {
-  text-align: center;
+.task_text {
+  font-weight: 300;
 }

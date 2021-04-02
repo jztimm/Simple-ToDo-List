@@ -9,7 +9,7 @@ function Task(props) {
     <div>
       <List className="task_list">
         <ListItem button>
-          <ListItemText primary={props.text} />
+          <ListItemText primary={props.text} className="task_text text-center"/>
         </ListItem>
         <Button variant="text" color="default" ><DeleteIcon/> Delete Me</Button>
       </List>

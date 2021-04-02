@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
 import { Button, FormControl, InputLabel, Input } from '@material-ui/core';
 import Task from './Task'
+import '../Styles/Form.css'
 
 function Form() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(["da baby", "da baby pt 2"]);
   const [input, setInput] = useState("");
 
   const changeHandler = (event) => {
