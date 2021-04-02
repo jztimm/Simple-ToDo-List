@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { Button, FormControl, InputLabel, Input } from '@material-ui/core';
+import Task from './Task'
 import '../Styles/Tasks.css'
 
 function Form() {
@@ -27,7 +28,7 @@ function Form() {
       </form>
       <div className="tasks_list">
         {tasks.map(task => (
-          <h3>{task}</h3>
+          <Task text={task}/>
         ))}
       </div>
     </div>
